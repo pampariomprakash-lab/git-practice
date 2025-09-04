@@ -9,7 +9,7 @@ echo "First fruit is $FRUITS[2]"
 echo "All fruits together are $FRUITS"
  
 echo "what fruit do you want"
-read FRUITS
+read -s FRUITS
 
 echo "thank you for chosing the $FRUITS[2]"
 
