@@ -1,2 +1,4 @@
 #!/bin/bash
-date & cal
+DATE=${date & cal}
+
+echo "todays day & Month is $DATE "
