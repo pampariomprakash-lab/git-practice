@@ -28,3 +28,18 @@ else
     echo " it is already installed nothing to do "
 
 fi
+
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then
+    echo " MYsql is not installed..going to install "
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then
+        echo " MY sql installation failur..please check "
+        exit 1
+    else
+        echo "My sql installtion is suceeslull "
+    fi
+ fi           
