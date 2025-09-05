@@ -10,10 +10,10 @@ if [ $USERID -eq 0 ]
    if   dnf list installed python &>/dev/null
    then exit 0
     else
-     #echo " Python installation faile."
-    # exit 1
-     #fi
-#else     
+     echo " Python installation faile."
+     exit 1
+    fi
+else     
         echo " run the script with sudo access"
 fi
    
