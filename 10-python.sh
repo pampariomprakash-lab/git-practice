@@ -13,7 +13,7 @@ if [ $USERID -eq 0 ]
      #echo " Python installation faile."
     # exit 1
      #fi
-else     
+#else     
         echo " run the script with sudo access"
 fi
    
