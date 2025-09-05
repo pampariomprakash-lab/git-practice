@@ -42,4 +42,6 @@ then
     else
         echo "My sql installtion is suceeslull "
     fi
- fi           
+ else
+    echo " MY sql is already installed nothing to do"
+fi             
