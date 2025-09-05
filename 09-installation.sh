@@ -11,12 +11,12 @@ then
     echo " you don't have root access "
 fi
 
-dnf list installed gitttt
+dnf list installed git
 
 if [ $? -ne 0 ]
 then   
     echo " Git is not installed , going to install it.."
-    dnf install gitt -y
+    dnf install git -y
     if [ $? -ne 0 ]
     then
         echo " Git installation is not successfull,, recheck it"
