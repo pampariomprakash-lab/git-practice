@@ -5,9 +5,9 @@ USERID=$(id -u )
 
 if [ $USERID -eq 0 ]
     then 
-    dnf install python -y
+    dnf install python3 -y
     echo "Python is being installed "
-   if   dnf list installed python &>/dev/null
+   if   dnf list installed python3 &>/dev/null
    then exit 0
     else
      echo " Python installation faile."
