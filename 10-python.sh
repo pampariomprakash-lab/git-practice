@@ -7,9 +7,13 @@ if [ $USERID -eq 0 ]
     then 
     dnf install python -y
     echo "Python is being installed "
-   if  [ dnf list installed python ]
-   then exit 1
+   if   dnf list installed python &>/dev/null
+   then exit 0
     else
-    echo " run the script with sudo access"
+     echo " Pythong installation faile."
+     exit 1
+     fi
+else     
+        echo " run the script with sudo access"
 fi
-fi    
+   
