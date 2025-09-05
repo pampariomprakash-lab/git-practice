@@ -8,9 +8,9 @@ if [ $USERID -eq 0 ]
     dnf install python -y
     echo "Python is being installed "
    if   dnf list installed python &>/dev/null
-   then exit 0
+   then exit 1
     else
-     echo " Pythong installation faile."
+     echo " Python installation faile."
      exit 1
    fi
 else     
