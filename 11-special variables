@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo " all varaiables passed to the script: $@"
+echo " number of varialbes passed to the script: $#"
+echo " Script name : $0 "
+echo  " currect working directorey: $PWD"
+echo " Home directory of current user; $HOME "
+echo " Process instance id of sciprt exectuing now: $$ "
+sleep 50 &
+echo " PID of last background command : $!"
+
