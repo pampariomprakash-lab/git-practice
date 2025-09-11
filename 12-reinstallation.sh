@@ -32,4 +32,6 @@ then
     else
         echo " MYSQL installation is sucess "    
     fi
+else
+    echo " MySQL is already installed..nothing to do.."    
 fi        
