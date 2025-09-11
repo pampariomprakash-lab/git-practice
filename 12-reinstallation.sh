@@ -1,9 +1,9 @@
 #!/bin/bash
 
 USERID=$(id -u)
-if [ $USERID -eq 0 ]
+if [ $USERID -ne 0 ]
 then
-    echo " you have $USERID root acess"
+    echo " you have  root acess "
     else
     echo " you don't have root access "
     exit 1
