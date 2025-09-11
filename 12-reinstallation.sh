@@ -7,3 +7,5 @@ then
     else
     echo " you don't have root access "
 fi
+
+dnf install git -y
