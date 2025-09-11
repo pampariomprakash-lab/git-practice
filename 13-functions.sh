@@ -5,10 +5,10 @@ USERID=$(id -u)
 VALIDATE() {
     if [ $1 -ne 0 ]
     then
-        echo " command is ....Failed "
+        echo " $2 is ....Failed "
         exit 1
     else
-        echo " command is ....Sucess"
+        echo " $2 is ....Sucess"
     fi        
 }
 
@@ -22,7 +22,7 @@ fi
 
 dnf list installed git
 
-VALIDATE $?
+VALIDATE $? "Listing Git "
 # if [ $? -ne 0 ]
 # then
 #     echo " Git is not installed, going to install it.. "
