@@ -6,6 +6,10 @@
 SOURCE_DIR="/home/om/projects"
 BACKUP_DIR="/home/om/backups"
 DATE=$(date)
+
+#Enusre directory exits
+mkdir -p "$SOURCE_DIR"
+mkdir -p "$BACKUP_DIR"
 echo " Starting backup..."
 tar -czf "$BACKUP_DIR/backup-$DATE. tar.gz" "$SOURCE_DIR"
 echo " Backup completed for $DATE"
