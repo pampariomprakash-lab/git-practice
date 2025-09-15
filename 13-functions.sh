@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
-
+#Function to validate command sucesss
 VALIDATE() {
     if [ $1 -ne 0 ]
     then
@@ -12,6 +12,7 @@ VALIDATE() {
     fi        
 }
 
+#checking if we have root access or not
 if [ $USERID -eq 0 ]
 then
     echo " you have  root acess "
@@ -21,7 +22,7 @@ then
 fi
 
 dnf list installed git
-
+#calling funtion
 VALIDATE $? "Listing Git "
 if [ $? -ne 0 ]
 then
@@ -39,7 +40,7 @@ if  [ $? -ne 0 ]
 then
     echo " My sql is not installed. going to install it.."
     dnf install mysql -y
-   VALIDATE $? " Installing MYSQL"
+   VALIDATE $? " Installing MYSQL" #calling function
 else
     echo " MySQL is already installed..nothing to do.."    
 fi        
